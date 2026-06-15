@@ -26,7 +26,7 @@ prompt = ChatPromptTemplate.from_messages(
 def generate_response(question, model_name, temperature, max_tokens):
     llm = ChatGroq(
         model = model_name,
-        groq_api_key = os.getenv("GROQ_API_KEY"),
+        groq_api_key = os.getenv("groq_api_key"),
         temperature=temperature,
         max_tokens=max_tokens
     )
